@@ -4,6 +4,12 @@ Variables in coding refer to a keyword, or set of keywords, that hold a given va
 ## JavaScript Variables
 In Javascript (**JS**), variables are defined with certain keywords. These keywords each have a different purpose and reasoning behind existing. There are three major variable types: `let`, `const`, and `var`. The rest of this page will be dedicated to breaking them down. 
 
+variables are declared by declaring the *scope* of the variable, giving it a name, and optionally, assigning it a value. it looks like this:
+```js
+    const targetAge = 19;
+```
+
+
 ### `let`
 **Functionality:**
 - [x] Declarable
@@ -45,6 +51,12 @@ var greetingMessage = "Hello Reader!";
 ### Examples of Each Variable Type
 **Examples of `let`**
 
+Below is an example of a variable being defined, then declared.
+```js
+let greetingMessage;//note that if no value is given, undefined is assumed.
+greetingMessage = "Hello Reader!";
+```
+
 Below is an example of a variable being re-declared.
 ```js
 let greetingMessage = "Hello Reader!";
@@ -63,6 +75,8 @@ let numberOfReaders = 10
 
 **Examples of `const`**
 
+Though not listed above, it's worth mentioning that while you can declare a `const` variable with no defined value, it's pointless to do since you can't ever modify it to give it a value.
+
 Below shows the declaration of a constant variable.
 ```js
 const greetingMessage = "Hello Reader!";
@@ -80,3 +94,6 @@ numberOfCitizens = numberOfCitizens + 150//throws an error from assignment to co
 
 **There will not be examples of `var` provided - use modern variables!**
 
+The key takeaway from this is to know that `const` is used for static values, whereas `let` is used for dynamic values. For a vast majority of the variables that you declare in **JS**, it's best to use `const`. You'll see in other pages how the two different variable declarations can be meshed together to create fast, readable code.
+
+Now that you understand the types of variables, let's move onto the [types of values](https://github.dev/Remanxnce/How2Script/blob/main/JavaScript/types/page.md) that they can hold!
