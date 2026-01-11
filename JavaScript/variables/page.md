@@ -96,4 +96,4 @@ numberOfCitizens = numberOfCitizens + 150//throws an error from assignment to co
 
 The key takeaway from this is to know that `const` is used for static values, whereas `let` is used for dynamic values. For a vast majority of the variables that you declare in **JS**, it's best to use `const`. You'll see in other pages how the two different variable declarations can be meshed together to create fast, readable code.
 
-Now that you understand the types of variables, let's move onto the [types of values](https://github.dev/Remanxnce/How2Script/blob/main/JavaScript/types/page.md) that they can hold!
+Now that you understand the types of variables, let's move onto the [types of values](https://github.com/Remanxnce/How2Script/blob/main/JavaScript/types/page.md) that they can hold!
