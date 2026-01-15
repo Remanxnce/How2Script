@@ -73,6 +73,18 @@ Like with the `bigint` above, [MDN's Website](https://developer.mozilla.org/en-U
 const hoursWastedDoingThis = 300;
 ```
 
+## Array
+`array` most commonly refers to a list of items with a shared datatype. It can store multiple values in it, all of which are tied to a numeric `index` that each item of an array is assigned. Arrays are a powerful data structure that, when combined with almost any other data type, is capable of doing a lot.
+
+```js
+const averageGrades = [
+    94, 88, 92, 99
+];
+const bestGrades = [100, 95, 100, 99];
+```
+
+Arrays are also commonly used in looping and iterations to modify data. Iterations are covered in a future lesson, wherein arrays will gain a lot of importance.
+
 ## Object
 `object` refers to a **JS** object. Objects in JS are a distinct data structure that's very powerful. It can store multiple values within it, and has no limited size. They're best known for being able to store `[key]:value` data inside of themselves. Objects make up the bulk of most of the internet, actually, including in:
 - Databases
@@ -128,6 +140,24 @@ While that data structure is large on it's own, it's very easy to access data fr
 ```js
 const bestMemberFromBlue = activeTeams.blue.bestMember;
 ```
+
+It's also worth noting that Objects and arrays can be combined to create easily iteratable data. Take a look a look at the snippet below from a small pack I made for minecraft:
+
+```js
+const effects = [
+    {
+        id:"strength",
+        ticks:10,
+        amplifier:1
+    },
+    {
+        id:"speed",
+        ticks:10,
+        amplifier:2
+    }
+];
+```
+Each effect is able to have its corresponding data stored to it, but is still able to be looped through in a convenient manner.
 
 Storing things in `object` type allows for them to be stored in this complex way. However, storing largers sets of data in objects is called **JSON**, or *Javascript Object Notation*, not Object Data or whatever else you were thinking. JSON isn't the most scalable data storage method, but it's the best that **JS** can offer.
 
