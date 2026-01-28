@@ -41,6 +41,18 @@ Strict equality checks are also a common check, but are a more concise check tha
 
 Strict Equality checks are *generally* better practice then Loose Equality checks, but a vast majority of the time, the two function the same. 
 
+### !== (Not Equal To)
+Not equal to check if:
+- Two values are not equal
+
+Not equal to checks are also a common check, and unlike **Loose Equality**, does not have a strict version of itself. It can be used on all datatypes, but may have some unexpected results with Objects and Arrays.
+
+```js
+    console.log(3 !== 3)//false
+    console.log(4 !== "four")//true
+    console.log("apple" !== "banana")//true
+```
+
 ### > (Greater then)
 Greater then checks if:
 - the left-side value is greater then the right-side value
@@ -79,6 +91,8 @@ It's a common check. I'm kinda just assuming that you understand how to use thes
 ## Logical Operators
 Logical Operators are used to check and combine logic, and are also used in tandem with `if` statements to create conditional code as well. They're less essential then **Comparative Operators**, but are still incredibly important.
 
+W3Schools has a great link talking about these, if you don't find my explanations and examples to be good enough. it can be found [Here](https://www.w3schools.com/js/js_logical.asp).
+
 ### && (AND)
 The && operator is used to combine multiple conditions together. Conditions are evaluated left-to-right, and the evaluations stop happening after the first check that returns false.
 
@@ -96,3 +110,30 @@ the || operator is used to check if a single condition within a series of condit
     console.log(1 == 2 || 3)//this returns 3, because the || operator is used to refer to 3 if the conditon is evaluated as false
     console.log(1 == 2 || 2 == 3)//false
 ```
+
+### ! (NOT)
+The ! operator is used to reverse the logic of a boolean value. it swaps `true` to `false`, and vice verca. It can be used on any condition and datatype, but sometimes requires wrapping the condition in `()`.
+
+```js
+    console.log(!(1 == 2))//true
+    console.log(!("apple"))//false
+```
+
+### ?? (Nullish Coalescing)
+The ?? operator is used as a shorthand to check if a value is `undefined`, and assign it a default value if it is. It can be used to assign any value.
+
+```js
+    //without nullish coalescing
+    let classroom = getClassroom();
+    if (classroom == undefined){
+        classroom = "Mrs. Parks"
+    }
+```
+
+```js
+    //with nullish coalescing
+    const classroom = getClassroom() ?? "Mrs. Parks"
+```
+
+This operator is, for me personally, one of, if not the most common operator that I use behind equality. It doesn't hold a lot of value for smaller-scale projects, but for larger codebases, it's a major space and time saver, especially when used with `JSON.parse()` and `JSON.stringify()`.
+
