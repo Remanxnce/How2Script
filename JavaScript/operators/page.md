@@ -137,3 +137,57 @@ The ?? operator is used as a shorthand to check if a value is `undefined`, and a
 
 This operator is, for me personally, one of, if not the most common operator that I use behind equality. It doesn't hold a lot of value for smaller-scale projects, but for larger codebases, it's a major space and time saver, especially when used with `JSON.parse()` and `JSON.stringify()`.
 
+## ? : (Ternary Operator(s))
+The ? operator, known as a Ternary operator, is used to write a shorthand if-else statement. It will evaluate based on the value of the content before the operator, and returns either:
+- The content after the `?` if the condition evaluates to true
+- The content after the `:` if the condition evaluates to false
+
+It's hard to call just the `?` the Ternary Operator, as the `:` goes hand-in-hand with it. It looks like this:
+```js
+    console.log(8 > 10 ? `8 Is greater than 10!` : `8 is less than 10`);//returns "8 is less than 10"
+    const isImportant = true
+    console.log(isImportant ? `THIS IS IMPORTANT!` : `this is not important`);//returns "THIS IS IMPORTANT!"
+```
+
+A lot of the value from this operator comes from using it for small conditional lines. You shouldn't use it in place of multi-line if statements, and should generally try to avoid stacking Ternaries. Do NOT do this:
+```js
+    const x = 5
+    console.log(x > 3 ? (x > 4 ? (x > 5 ? "x is a large number" : "x is 4") : "x is 3") : "x is less than 3")
+```
+I'm sure just from reading that, you can get a pretty good idea of why it's not very good practice to stack ternaries.
+
+## ?. (Optional Chaining)
+The ?. operator is used with objects, class instances or potentially undefined values to avoid accessing methods or properties that do not exist upon it. Chances are, you won't use this operator a lot early on.
+
+Picture an object with the following structure for the examples:
+```js
+    const winningRecords = {
+        "2025":{
+            winner:"rem",
+            runnerUp:"padro"
+        },
+        "2024":{
+            winner:{
+                name:"orange",
+                winGap:33,
+                age:19
+            },
+            runnerUp:{
+                name:"padro",
+                age:22,
+                pastPlacements:[ 2, 3, 9, 14 ]
+            }
+        }
+    }
+```
+note that most commonly, you wouldn't see dictionary-type objects that have different formats within it, but for this example we'll have it.
+
+```js
+    console.log(winningRecords[2024].winner?.name)//orange
+    console.log(winningRecords[2025].winner?.name)//undefined, throws no error
+    console.log(winningRecords[2025].winner?.name ?? winningRecords[2025].winner)//rem
+    console.log(winningRecords[2025].runnerUp.pastPlacements[1])//throws an error, pastPlacements is trying to be accessed when it doesn't exist
+    console.log(winningRecords[2025].runnerUp.pastPlacements?.[1])//undefined, but throws no error this time, since it won't attempt to access indexes from an array that doesn't exist
+```
+
+Optional Chaining is best used as a safety net, to ensure that you don't get errors from accessing something that may not have a defined value.
