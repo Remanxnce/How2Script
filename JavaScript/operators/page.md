@@ -137,7 +137,7 @@ The ?? operator is used as a shorthand to check if a value is `undefined`, and a
 
 This operator is, for me personally, one of, if not the most common operator that I use behind equality. It doesn't hold a lot of value for smaller-scale projects, but for larger codebases, it's a major space and time saver, especially when used with `JSON.parse()` and `JSON.stringify()`.
 
-## ? : (Ternary Operator(s))
+### ? : (Ternary Operator(s))
 The ? operator, known as a Ternary operator, is used to write a shorthand if-else statement. It will evaluate based on the value of the content before the operator, and returns either:
 - The content after the `?` if the condition evaluates to true
 - The content after the `:` if the condition evaluates to false
@@ -156,7 +156,7 @@ A lot of the value from this operator comes from using it for small conditional 
 ```
 I'm sure just from reading that, you can get a pretty good idea of why it's not very good practice to stack ternaries.
 
-## ?. (Optional Chaining)
+### ?. (Optional Chaining)
 The ?. operator is used with objects, class instances or potentially undefined values to avoid accessing methods or properties that do not exist upon it. Chances are, you won't use this operator a lot early on.
 
 Picture an object with the following structure for the examples:
@@ -191,3 +191,65 @@ note that most commonly, you wouldn't see dictionary-type objects that have diff
 ```
 
 Optional Chaining is best used as a safety net, to ensure that you don't get errors from accessing something that may not have a defined value.
+
+## Arithmetic Operators
+Arithmetic Operators are used to perfrom arithmetic operations on a number. They are almost exclusively used on number-type values, but have some implementation with other types.
+
+### The `NaN` Keyword(s)
+
+NaN, or *Not a Number*, is returned when a number-type value is attempted to be added to a non-number type before the number is converted to a string. It cannot be checked from Loose equality, and instead requires the `isNaN` function.
+
+### +=, -=, *=, /= (Assignment Operators)
+I'm covering all four of these at once because they're all very functionally similar. They, in short, assign the variable on the left-hand side the value of it after performing what's on the right-hand side of the operator.
+
+```js
+console.log(5 -= 10)//-5
+let x = 5
+x += 9
+console.log(x)//14
+```
+
+### +, -, *, / (Regular Arithmetic Operators)
+I'm covering all four of these at once because they're very basic concepts. If you don't know basic arithmetic, you *probably* shouldn't be reading this.
+
+```js
+console.log(5 - 10)//-5
+let x = 5
+x - 9
+console.log(x)//5, as the value as was never saved.
+```
+
+```js
+console.log("Hello" + " World")//Hello World
+```
+
+### % (Modulus)
+Modulus operator returns the remainder of a given number when divided by another number. It's essentially long division from elementary school.
+
+```js
+console.log(9 % 4)//1
+console.log(2 % 2)//0
+console.log(3 % 11)//3
+```
+
+### ++ (Increment)
+The Increment Operator automatically adds 1 to a number and assigns the value to the variable.
+
+```js
+let x = 3
+x++
+console.log(x)//4
+```
+
+### -- (Decrement)
+The Decrement Operator automatically removes 1 to a number and assigns it to the value of the variable.
+```js
+let x = 4
+x--
+console.log(x)//3
+```
+
+## Takeaway
+Almost every operator has a use in any codebase, and all can result in clean, strong code. It's best to spend some time learning these, if you can. Note that there is still some operators not listed here, like `<<` (Left Bitshift) and others that I haven't spoken about, as you won't commonly use them.
+
+But, now that you know how operators work, especially Logical Operators, let's use them to make some [Conditionals!](github.com/Remanxnce/How2Script/main/JavaScript/conditions/page.md)
