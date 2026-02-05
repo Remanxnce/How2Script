@@ -252,4 +252,4 @@ console.log(x)//3
 ## Takeaway
 Almost every operator has a use in any codebase, and all can result in clean, strong code. It's best to spend some time learning these, if you can. Note that there is still some operators not listed here, like `<<` (Left Bitshift) and others that I haven't spoken about, as you won't commonly use them.
 
-But, now that you know how operators work, especially Logical Operators, let's use them to make some [Conditionals!](github.com/Remanxnce/How2Script/main/JavaScript/conditions/page.md)
+But, now that you know how operators work, especially Logical Operators, let's use them to make some [Conditionals!](https://github.com/Remanxnce/How2Script/blob/main/JavaScript/conditions/page.md)

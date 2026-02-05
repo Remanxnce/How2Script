@@ -189,4 +189,4 @@ console.log(uselessVariable == undefined);//true
 
 It's worth knowing all of the data types that any language has to offer, as every single one of them brings something unique to work with. Objects would be useless without strings, numbers, and boolean values, and all of those values would be annoying to use if they had to be manually entered everywhere.
 
-Now that you understand the different types of values, let's learn how to [Operate](https://github.com/Remanxnce/How2Script/JavaScript/operators/page.md) on those different values.
+Now that you understand the different types of values, let's learn how to [Operate](https://github.com/Remanxnce/How2Script/blob/main/JavaScript/operators/page.md) on those different values.
