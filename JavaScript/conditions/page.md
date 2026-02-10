@@ -148,4 +148,28 @@ switch (grade){
 
 Note a couple different things going on with this `switch` statement:
 - The `break` keyword
-    - `break` is used to break out of a given case, and end the evalutation. Note the added `case "S"` at the top of the case statement. It makes `"A"` or `"S"` assign `93` to `approximatePercentage`. However, if there was a break under `case "S"`, passing S into the case statement would leave `approximatePercentage` as undefined.
+  - `break` is used to break out of a given case, and end the evalutation. Note the added `case "S"` at the top of the case statement. It makes `"A"` or `"S"` assign `93` to `approximatePercentage`. However, if there was a break under `case "S"`, passing S into the case statement would leave `approximatePercentage` as undefined.
+- The `default` keyword
+  - `default` is used when no other case is matched. It's meant to be the last case added in a series of cases, and is generally used as a catch-all case. If another case fires, the default case does not subsequently also activate; it is the last `else` in the statements.
+- Blocks are Required!
+  - Code blocks are required for case statements' syntax to not be messy. You *can* do one-line case statements, but you're taking advantage of semicolons at that point, and it becomes harder to read.
+  - Below this will have an example of a non-code-blocked case statement.
+- The `:` is Required!
+  - In order to signify a case statement's executed code, a `:` must be denoted after the case.
+
+```js
+switch (fruit):{
+    case "Apple": console.log(`Yum!`); break;
+    case "Banana": console.log(`Yummy!`); break;
+    case "Orange": console.log(`Better be a blood orange!`); break;
+    default: console.log(`Tasty!`); break;
+}
+```
+it's not *the worst* to do short-style case statements like that, but the added `break` after each line can get kinda gross.
+
+Congratulations! If you've read this far from the start, you've now learned as much as I knew about 4 months into my freshman year of highschool. *code.org kinda sucked...*
+It's not bad to sometimes take a break from understanding everything here at once, and to do your own research as well. I'm only one man, and I'm writing this page entirely authentically with zero AI; I may forget some things! 
+
+It's also nice to try and create your own code. A *very* large part of learning to code comes from learning by doing, and since you the reader should be at a point now where you can write some basic code, it's not a bad idea to take the time to try and create some small projects. 
+
+But, if you're ready, let's continue on to (Functions)[https://github.com/Remanxnce/How2Script/blob/main/JavaScript/conditions/page.md], and start to gain skills to build a real codebase.
