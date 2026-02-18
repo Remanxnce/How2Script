@@ -172,4 +172,4 @@ It's not bad to sometimes take a break from understanding everything here at onc
 
 It's also nice to try and create your own code. A *very* large part of learning to code comes from learning by doing, and since you the reader should be at a point now where you can write some basic code, it's not a bad idea to take the time to try and create some small projects. 
 
-But, if you're ready, let's continue on to (Functions)[https://github.com/Remanxnce/How2Script/blob/main/JavaScript/conditions/page.md], and start to gain skills to build a real codebase.
+But, if you're ready, let's continue on to (Functions)[https://github.com/Remanxnce/How2Script/blob/main/JavaScript/functions/page.md], and start to gain skills to build a real codebase.
